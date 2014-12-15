@@ -110,4 +110,4 @@ Open the menu `Preferences > Settings - User` and **paste** the following and **
 If you want to set these formating rules on a project or languuage basis, read the [settings documentation](http://www.sublimetext.com/docs/3/settings.html).
 
 
-View HTML version as: http://andrewholgate.github.io/sublime3-drupal-setup/
+View HTML version at: http://andrewholgate.github.io/sublime3-drupal-setup/
