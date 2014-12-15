@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Sublime3 setup for Drupal development : A start-to-finish guide to installing Sublime3 Text and configuring it as an IDE for Drupal development using recommended configurations and add-ons.">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Sublime3 setup for Drupal development</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/andrewholgate/sublime3-drupal-setup">View on GitHub</a>
+
+          <h1 id="project_title">Sublime3 setup for Drupal development</h1>
+          <h2 id="project_tagline">A start-to-finish guide to installing Sublime3 Text and configuring it as an IDE for Drupal development using recommended configurations and add-ons.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/andrewholgate/sublime3-drupal-setup/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/andrewholgate/sublime3-drupal-setup/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="1-install-sublime3-text" class="anchor" href="#1-install-sublime3-text" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Install Sublime3 Text</h1>
+
+<p>Download and install <a href="http://www.sublimetext.com/3">Sublime3</a> for your operating system.</p>
+
+<h1>
+<a id="2-install-sublime3-package-manager" class="anchor" href="#2-install-sublime3-package-manager" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Install Sublime3 Package Manager</h1>
+
+<p>The Package Manager allows for the easy installation of Sublime3 packages from <a href="https://sublime.wbond.net/">Package Control</a> (the Sublime package manager).</p>
+
+<ul>
+<li>In order to easily install these 3rd party packages, you will first need to navigate to the <a href="https://sublime.wbond.net/installation#st3">Package Control installer</a> and <strong>copy</strong> the code underneath the Sublime3 tab, which looks like: </li>
+</ul>
+
+<pre><code>import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
+</code></pre>
+
+<ul>
+<li>In Sublime3, open the menu <code>View &gt; Show Console</code> and a console will open at the bottom. <strong>Paste</strong> the code which you copied in the previous step and press enter. Sublime3 will then install the Package Control manager for you.</li>
+</ul>
+
+<h2>
+<a id="using-the-package-manager" class="anchor" href="#using-the-package-manager" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using the Package Manager</h2>
+
+<p>You can now quickly and easily install new Sublime3 packages by:</p>
+
+<ol>
+<li><p>Open the Command Palette using <code>Ctrl/Cmd + Shift + p</code> - a small dialog box will appear at the top of the screen.</p></li>
+<li><p>Start typing in the word <code>install</code> and the command <code>Package Control: Install Package</code> will appear. Hit enter or click on it.</p></li>
+<li><p>After  few second the dialog box will show a list of all the packages available from the online Package Control. When you start to type the name of the package you want, it will autocomplete for you. Once highlighted, press enter and it will install the package for use in Sublime3.</p></li>
+</ol>
+
+<h1>
+<a id="3-install-sublime3-packages" class="anchor" href="#3-install-sublime3-packages" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Install Sublime3 Packages</h1>
+
+<p>Below is a non-exhaustive list of Sublime3 packages I use regularly for Drupal development.
+Read the descriptions of each one for their exact usage.</p>
+
+<h2>
+<a id="drupal-specific-packages" class="anchor" href="#drupal-specific-packages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Drupal Specific Packages</h2>
+
+<ul>
+<li><a href="https://sublime.wbond.net/packages/Drupal">Drupal</a></li>
+<li><a href="https://sublime.wbond.net/packages/Goto%20Drupal%20API">Goto Drupal API</a></li>
+</ul>
+
+<h2>
+<a id="theme-package" class="anchor" href="#theme-package" aria-hidden="true"><span class="octicon octicon-link"></span></a>Theme Package</h2>
+
+<ul>
+<li><a href="https://sublime.wbond.net/packages/Theme%20-%20Flatland">Theme - Flatland</a></li>
+</ul>
+
+<h2>
+<a id="debugging-package" class="anchor" href="#debugging-package" aria-hidden="true"><span class="octicon octicon-link"></span></a>Debugging Package</h2>
+
+<ul>
+<li><a href="https://sublime.wbond.net/packages/Xdebug%20Client">Xdebug Client</a></li>
+</ul>
+
+<h2>
+<a id="coding-standards-and-helpers-packages" class="anchor" href="#coding-standards-and-helpers-packages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Coding Standards and Helpers Packages</h2>
+
+<ul>
+<li><a href="https://sublime.wbond.net/packages/DocBlockr">DocBlockr</a></li>
+<li><a href="https://sublime.wbond.net/packages/Auto%20Semi-Colon">Auto Semi-Colon</a></li>
+<li><a href="https://sublime.wbond.net/packages/BracketHighlighter">BracketHighlighter</a></li>
+<li><a href="https://sublime.wbond.net/packages/SublimeCodeIntel">SublimeCodeIntel</a></li>
+<li><a href="https://sublime.wbond.net/packages/TrailingSpaces">TrailingSpaces</a></li>
+<li><a href="https://sublime.wbond.net/packages/Trimmer">Trimmer</a></li>
+<li><a href="https://sublime.wbond.net/packages/CSScomb">CSScomb</a></li>
+<li>
+<a href="https://sublime.wbond.net/packages/SublimeLinter">SublimeLinter</a>
+
+<ul>
+<li><a href="https://sublime.wbond.net/packages/SublimeLinter-php">SublimeLinter-php</a></li>
+<li><a href="https://sublime.wbond.net/packages/SublimeLinter-jshint">SublimeLinter-jshint</a></li>
+<li><a href="https://sublime.wbond.net/packages/SublimeLinter-json">SublimeLinter-json</a></li>
+</ul>
+</li>
+<li><a href="https://sublime.wbond.net/packages/SublimeLinter-csslint">SublimeLinter-csslint</a></li>
+<li><a href="https://sublime.wbond.net/packages/Emmet">Emmet</a></li>
+</ul>
+
+<h2>
+<a id="other-packages" class="anchor" href="#other-packages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Other Packages</h2>
+
+<ul>
+<li>
+<a href="https://sublime.wbond.net/packages/GitGutter">GitGutter</a> (disable when using XDebug)</li>
+<li><a href="https://sublime.wbond.net/packages/SideBarEnhancements">SideBarEnhancements</a></li>
+<li><a href="https://sublime.wbond.net/packages/FileDiffs">FileDiffs</a></li>
+</ul>
+
+<h1>
+<a id="4-drupal-formatting" class="anchor" href="#4-drupal-formatting" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. Drupal formatting</h1>
+
+<p>Configure Sublime3 formatting with common Drupal settings, such as 2 spaces for indents, an 80 character right boarder, etc:</p>
+
+<p>Open the menu <code>Preferences &gt; Settings - User</code> and <strong>paste</strong> the following and <strong>Save</strong>.</p>
+
+<pre><code>{
+    "bold_folder_labels": true,
+    "caret_style": "wide",
+    "color_scheme": "Packages/Theme - Flatland/Flatland Dark.tmTheme",
+    "default_line_ending": "unix",
+    "draw_white_space": "all",
+    "ensure_newline_at_eof_on_save": true,
+    "fade_fold_buttons": false,
+    "fallback_encoding": "UTF-8",
+    "find_selected_text": true,
+    "font_options":
+    [
+        "subpixel_antialias"
+    ],
+    "font_size": 12.0,
+    "highlight_line": true,
+    "line_padding_bottom": 1,
+    "open_files_in_new_window": false,
+    "rulers":
+    [
+        80
+    ],
+    "shift_tab_unindent": true,
+    "soda_classic_tabs": true,
+    "tab_size": 2,
+    "theme": "Flatland Dark.sublime-theme",
+    "translate_tabs_to_spaces": true,
+    "trim_automatic_white_space": true,
+    "trim_trailing_white_space_on_save": true,
+    "use_tab_stops": true,
+    "word_separators": "./\\()\"'-:,.;&lt;&gt;~!@#%^&amp;*|+=[]{}`~?"
+}
+
+</code></pre>
+
+<p>If you want to set these formating rules on a project or languuage basis, read the <a href="http://www.sublimetext.com/docs/3/settings.html">settings documentation</a>.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Sublime3 setup for Drupal development maintained by <a href="https://github.com/andrewholgate">andrewholgate</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
