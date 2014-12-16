@@ -95,6 +95,10 @@ Open the menu `Preferences > Settings - User` and **paste** the following and **
   [
     80
   ],
+  "ignored_packages":
+   [
+    "Vintage"
+  ],
   "shift_tab_unindent": true,
   "soda_classic_tabs": true,
   "tab_size": 2,
@@ -103,7 +107,7 @@ Open the menu `Preferences > Settings - User` and **paste** the following and **
   "trim_automatic_white_space": true,
   "trim_trailing_white_space_on_save": true,
   "use_tab_stops": true,
-  "word_separators": "./\\\\()\\"'-:,.;<>~!@#%^&*|+=[]{}`~?"
+  "word_separators": "./\\()\"'-:,.;<>~!@#%^&*|+=[]{}`~?"
 }
 ```
 
