@@ -44,6 +44,17 @@ Read the descriptions of each one for their exact usage.
 
 - [Xdebug Client](https://sublime.wbond.net/packages/Xdebug%20Client)
 
+Be sure you add the `url` for browser debugging and `path_mapping` configuration for remote debugging to function in `Tools > XDebug > Settings > Settings - User`.
+
+```
+{
+  "url": "http://dev.example.com",
+  "path_mapping": {
+        "/absolute/path/to/file/on/server" : "/absolute/path/to/file/on/computer"
+    }
+}
+```
+
 ## Coding Standards and Helpers Packages
 
 - [DocBlockr](https://sublime.wbond.net/packages/DocBlockr)
@@ -59,6 +70,9 @@ Read the descriptions of each one for their exact usage.
   - [SublimeLinter-json](https://sublime.wbond.net/packages/SublimeLinter-json)
 - [SublimeLinter-csslint](https://sublime.wbond.net/packages/SublimeLinter-csslint)
 - [Emmet](https://sublime.wbond.net/packages/Emmet)
+- [Terminal](https://packagecontrol.io/packages/Terminal)
+- [MarkdownPreview](https://packagecontrol.io/packages/Markdown%20Preview)
+- [MarkdownEditing](https://packagecontrol.io/packages/MarkdownEditing)
 
 ## Other Packages
 
