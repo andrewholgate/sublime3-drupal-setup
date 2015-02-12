@@ -10,7 +10,7 @@ The Package Manager allows for the easy installation of Sublime3 packages from [
 
 - In order to easily install these 3rd party packages, you will first need to navigate to the [Package Control installer](https://sublime.wbond.net/installation#st3) and **copy** the code underneath the Sublime3 tab, which looks like:
 
-```
+```python
 import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
 ```
 
@@ -46,7 +46,7 @@ Read the descriptions of each one for their exact usage.
 
 Be sure you add the `url` for browser debugging and `path_mapping` configuration for remote debugging to function in `Tools > XDebug > Settings > Settings - User`.
 
-```
+```json
 {
   "url": "http://dev.example.com",
   "path_mapping": {
@@ -86,46 +86,47 @@ Configure Sublime3 formatting with common Drupal settings, such as 2 spaces for 
 
 Open the menu `Preferences > Settings - User` and **paste** the following and **Save**.
 
-```
+```json
 {
-  "bold_folder_labels": true,
-  "caret_style": "wide",
-  "color_scheme": "Packages/Theme - Flatland/Flatland Dark.tmTheme",
-  "default_line_ending": "unix",
-  "draw_white_space": "all",
-  "ensure_newline_at_eof_on_save": true,
-  "fade_fold_buttons": false,
-  "fallback_encoding": "UTF-8",
-  "find_selected_text": true,
-  "font_options":
-  [
-    "subpixel_antialias"
-  ],
-  "font_size": 12.0,
-  "highlight_line": true,
-  "line_padding_bottom": 1,
-  "open_files_in_new_window": false,
-  "rulers":
-  [
-    80
-  ],
-  "ignored_packages":
-   [
-    "Vintage"
-  ],
-  "shift_tab_unindent": true,
-  "soda_classic_tabs": true,
-  "tab_size": 2,
-  "theme": "Flatland Dark.sublime-theme",
-  "translate_tabs_to_spaces": true,
-  "trim_automatic_white_space": true,
-  "trim_trailing_white_space_on_save": true,
-  "use_tab_stops": true,
-  "word_separators": "./\\()\"'-:,.;<>~!@#%^&*|+=[]{}`~?"
+	"bold_folder_labels": true,
+	"caret_style": "wide",
+	"color_scheme": "Packages/MarkdownEditing/MarkdownEditor.tmTheme",
+	"default_line_ending": "unix",
+	"draw_white_space": "all",
+	"ensure_newline_at_eof_on_save": true,
+	"fade_fold_buttons": false,
+	"fallback_encoding": "UTF-8",
+	"show_encoding": true,
+	"find_selected_text": true,
+	"font_options":
+	[
+		"subpixel_antialias"
+	],
+	"font_size": 12.0,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Markdown",
+		"Vintage"
+	],
+	"line_padding_bottom": 1,
+	"open_files_in_new_window": false,
+	"rulers":
+	[
+		80
+	],
+	"shift_tab_unindent": true,
+	"soda_classic_tabs": true,
+	"tab_size": 2,
+	"theme": "Flatland Dark.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_automatic_white_space": true,
+	"trim_trailing_white_space_on_save": true,
+	"use_tab_stops": true,
+	"word_separators": "./\\()\"'-:,.;<>~!@#%^&*|+=[]{}`~?"
 }
 ```
 
 If you want to set these formating rules on a project or languuage basis, read the [settings documentation](http://www.sublimetext.com/docs/3/settings.html).
-
 
 View HTML version at: http://andrewholgate.github.io/sublime3-drupal-setup/
